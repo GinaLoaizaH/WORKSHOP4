@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Carpeta implements ComponenteFuncionable {
     private String nombre;
-    int contador;
+    private int contador;
     private List<ComponenteFuncionable> componentes = new ArrayList<>();
 
     public Carpeta(String nombre) {
@@ -55,11 +55,17 @@ public class Carpeta implements ComponenteFuncionable {
         return carpetaCopia;
     }
 
+    @Override
     public void mostrarArchivos() {
         System.out.println("Carpeta: " + nombre);
         for (ComponenteFuncionable componente : componentes) {
             componente.mostrarArchivos();
         }
+    }
+
+    @Override
+    public String getNombre() {
+        return nombre;
     }
 
 

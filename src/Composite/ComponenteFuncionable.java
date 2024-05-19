@@ -5,4 +5,5 @@ public interface ComponenteFuncionable {
     void borrar(Carpeta padre);
     ComponenteFuncionable copiar();
     void mostrarArchivos();
+    String getNombre();
 }

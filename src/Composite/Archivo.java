@@ -1,7 +1,7 @@
 package Composite;
 
 public class Archivo implements ComponenteFuncionable {
-    int contadorCopia;
+    private int contadorCopia;
     private String nombre;
 
 
@@ -13,7 +13,7 @@ public class Archivo implements ComponenteFuncionable {
     @Override
     public void buscar(String buscar) {
         if (nombre.toLowerCase().contains(buscar.toLowerCase())) {
-            System.out.println("Archivo encontrado con nombre " + nombre);
+            System.out.println("*Archivo encontrado con nombre " + nombre);
         } else {
             System.out.println("No se econtró archivo con nombre " + buscar);
         }
@@ -38,5 +38,10 @@ public class Archivo implements ComponenteFuncionable {
     public void mostrarArchivos() {
         System.out.println("Archivo: " + nombre);
 
+    }
+
+    @Override
+    public String getNombre() {
+        return nombre;
     }
 }
